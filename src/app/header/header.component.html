@@ -4,14 +4,13 @@
       <a href="#" class="navbar-brand">Recipe Book</a>
     </div>
 
-
     <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" >
         <li><a href="#" (click)="onSelect('recipe')">Recipes</a></li>
         <li><a href="#" (click)="onSelect('list')">List</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
+        <li class="dropdown" appDropdown>
           <a href="#" class="dropdown" role="button">
             Manage <span class="caret"></span>
           </a>
