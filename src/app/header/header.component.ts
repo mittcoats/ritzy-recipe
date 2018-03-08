@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { DataStorageService } from '../shared/data-storage.service';
 import { Response } from '@angular/http/src/static_response';
+import { AuthService } from '../auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +10,11 @@ import { Response } from '@angular/http/src/static_response';
 })
 
 export class HeaderComponent{
-  constructor(private dSService: DataStorageService) {}
+  constructor(
+    private dSService: DataStorageService,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   onSave() {
     this.dSService.storeRecipes()
@@ -21,6 +27,11 @@ export class HeaderComponent{
 
   onGet() {
     this.dSService.getRecipes();
+  }
+
+  onSignOut() {
+    this.authService.signOutUser();
+    this.router.navigate(["/"]);
   }
 
 }
