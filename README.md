@@ -2,7 +2,7 @@
 
 An angular test app courtesy of Maximilian Schwarzmüller.
 
-[Live Version](https://s3.console.aws.amazon.com/s3/buckets/udemy-ritzy-recipe/?region=us-east-1&tab=properties)
+[Live Version](http://udemy-ritzy-recipe.s3-website-us-west-1.amazonaws.com)
 
 ## Angular Single Page App Setup
 
